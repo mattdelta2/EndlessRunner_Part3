@@ -1,0 +1,11 @@
+Player movement
+move assets across -matt
+move other terrain across -matt
+fix UI -matt
+fix coins
+add other pickups
+add boss mechanics
+move pause menu across -matt
+add database -matt
+
+
