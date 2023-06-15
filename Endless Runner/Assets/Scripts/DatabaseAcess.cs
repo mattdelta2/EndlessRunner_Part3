@@ -20,8 +20,8 @@ public class DatabaseAcess : MonoBehaviour
         database = client.GetDatabase("Data");
         collection = database.GetCollection<BsonDocument>("HighScores");
 
-        //testing
-        getScoresFromDataBase();
+
+
 
 
 
@@ -60,7 +60,14 @@ public class DatabaseAcess : MonoBehaviour
         var highScore = new Highscore();
         // remove first part
 
-        var stringWithoutID = rawJson.Substring(rawJson.IndexOf("),") + 1);
+        var stringWithoutID = rawJson.Substring(rawJson.IndexOf("),") + 4);
+        var username = stringWithoutID.Substring(0, stringWithoutID.IndexOf(":") -2);
+
+        var score = stringWithoutID.Substring(stringWithoutID.IndexOf(":") + 2, stringWithoutID.IndexOf("}")-stringWithoutID.IndexOf(":"));
+
+        highScore.userName = username;
+        highScore.Score = Convert.ToInt32(score);
+
 
         return highScore;
     }
