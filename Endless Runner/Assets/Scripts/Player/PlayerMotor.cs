@@ -132,9 +132,10 @@ public class PlayerMotor : MonoBehaviour
     private void Death()
     {
         isDead = true;
-        Time.timeScale = 0f;
+        
         Debug.Log("You have DIED");
         SceneManager.LoadScene("DeathMenu");
+        
        
         
        
