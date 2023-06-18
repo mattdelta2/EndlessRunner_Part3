@@ -7,7 +7,7 @@ public class FileManager : MonoBehaviour
 {
 
     public Score score;
-
+    /*
     public GameObject[] tilePrefabDungeon;
     private List<GameObject> usedTiles;
     public GameObject[] tilePrefabCity;
@@ -68,6 +68,25 @@ public class FileManager : MonoBehaviour
         }
         finalPrefabIndex = randomIndex;
         return randomIndex;
+    }*/
+
+
+    public GameObject GroundTile;
+    Vector3 NextSpawnPoint;
+
+    public void SpawnTile()
+    {
+        GameObject temp = Instantiate(GroundTile,NextSpawnPoint,Quaternion.identity);
+        NextSpawnPoint = temp.transform.GetChild(0).transform.position;
+    }
+
+     void Start()
+    {
+        for (int i = 0; i < 15; i++)
+        {
+            SpawnTile();
+
+        }  
     }
 
     public void BossScene()

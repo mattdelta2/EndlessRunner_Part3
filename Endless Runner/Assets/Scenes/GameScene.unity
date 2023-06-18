@@ -691,11 +691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 0}
-  tilePrefabDungeon:
-  - {fileID: 9145402208400974276, guid: c167ae7f85d4e414a93a7e59654df03d, type: 3}
-  - {fileID: 2691909985391539748, guid: d74e8abb747842043837c0868fbe9013, type: 3}
-  - {fileID: 239745646635467304, guid: 8dc0cc8e51246b641b2d2ce5a93282bc, type: 3}
-  tilePrefabCity: []
+  GroundTile: {fileID: 4050534332026802623, guid: 556fa2dfd1aab6b4f956d1a983aa34b5, type: 3}
 --- !u!4 &1036913443
 Transform:
   m_ObjectHideFlags: 0
@@ -1756,7 +1752,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7937449648243811750, guid: 895f8ed45110e5e478bc58c7102c4a25, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: -0.65
       objectReference: {fileID: 0}
     - target: {fileID: 7937449648243811750, guid: 895f8ed45110e5e478bc58c7102c4a25, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1764,7 +1760,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7937449648243811750, guid: 895f8ed45110e5e478bc58c7102c4a25, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 39.5
+      value: 40.84
       objectReference: {fileID: 0}
     - target: {fileID: 7937449648243811750, guid: 895f8ed45110e5e478bc58c7102c4a25, type: 3}
       propertyPath: m_LocalRotation.w
