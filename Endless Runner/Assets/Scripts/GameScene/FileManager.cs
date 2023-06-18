@@ -7,7 +7,7 @@ public class FileManager : MonoBehaviour
 {
 
     public Score score;
-    /*
+    
     public GameObject[] tilePrefabDungeon;
     private List<GameObject> usedTiles;
     public GameObject[] tilePrefabCity;
@@ -55,23 +55,24 @@ public class FileManager : MonoBehaviour
 
     private int PrefabRandomIndex()
     {
-        if(tilePrefabDungeon.Length <= 1)
+        if (tilePrefabDungeon.Length <= 1)
         {
             return 0;
 
 
         }
         int randomIndex = finalPrefabIndex;
-        while(randomIndex == finalPrefabIndex)
+        while (randomIndex == finalPrefabIndex)
         {
             randomIndex = Random.Range(0, tilePrefabDungeon.Length);
         }
         finalPrefabIndex = randomIndex;
         return randomIndex;
-    }*/
+    }
+    
 
 
-    public GameObject GroundTile;
+   /* public GameObject GroundTile;
     Vector3 NextSpawnPoint;
 
     public void SpawnTile()
@@ -87,7 +88,7 @@ public class FileManager : MonoBehaviour
             SpawnTile();
 
         }  
-    }
+    }*/
 
     public void BossScene()
     {

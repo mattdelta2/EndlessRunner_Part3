@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class groundTile : MonoBehaviour
 {
-    FileManager fileManager;
+    /*FileManager fileManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -69,5 +69,5 @@ public class groundTile : MonoBehaviour
     void Update()
     {
         
-    }
+    }*/
 }

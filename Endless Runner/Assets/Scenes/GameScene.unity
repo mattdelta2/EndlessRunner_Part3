@@ -691,7 +691,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 0}
-  GroundTile: {fileID: 4050534332026802623, guid: 556fa2dfd1aab6b4f956d1a983aa34b5, type: 3}
+  tilePrefabDungeon:
+  - {fileID: 9145402208400974276, guid: c167ae7f85d4e414a93a7e59654df03d, type: 3}
+  - {fileID: 239745646635467304, guid: 8dc0cc8e51246b641b2d2ce5a93282bc, type: 3}
+  - {fileID: 2691909985391539748, guid: d74e8abb747842043837c0868fbe9013, type: 3}
+  tilePrefabCity: []
 --- !u!4 &1036913443
 Transform:
   m_ObjectHideFlags: 0
