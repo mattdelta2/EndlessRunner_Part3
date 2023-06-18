@@ -94,6 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obsticlePrefab: {fileID: 1677921020075253849, guid: dbfad7ed09c113546a42a68de2d101e6, type: 3}
+  CoinPrefab: {fileID: 2687618500076985061, guid: 77078cd25e428d146b46f15eb6827f91, type: 3}
 --- !u!1 &6201218999553557891
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
-    private int coin = 0;
+    public  int coin = 0;
 
     public TextMeshProUGUI coinText;
     void OnTriggerEnter(Collider other)

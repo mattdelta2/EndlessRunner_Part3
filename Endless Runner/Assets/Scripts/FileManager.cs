@@ -1,9 +1,12 @@
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class FileManager : MonoBehaviour
 {
+
+    public Score score;
 
     public GameObject[] tilePrefabDungeon;
     private List<GameObject> usedTiles;
@@ -65,5 +68,13 @@ public class FileManager : MonoBehaviour
         }
         finalPrefabIndex = randomIndex;
         return randomIndex;
+    }
+
+    public void BossScene()
+    {
+        if(score.coin ==100)
+        {
+            SceneManager.LoadScene("ShootingBossScene");
+        }
     }
 }

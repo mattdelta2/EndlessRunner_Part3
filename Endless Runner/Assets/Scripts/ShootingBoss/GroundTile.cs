@@ -12,6 +12,7 @@ public class GroundTile : MonoBehaviour
     {
         groundSpawner = GameObject.FindObjectOfType<GroundSpawner>();
         spawnObsticle();
+        spawnBossCoins();
 
 
     }
@@ -37,6 +38,41 @@ public class GroundTile : MonoBehaviour
         Transform spawnPoint = transform.GetChild(obsticlespawnIndex).transform;
 
         Instantiate(obsticlePrefab, spawnPoint.position,Quaternion.identity, transform);
+
+    }
+
+
+    public GameObject CoinPrefab;
+
+    void spawnBossCoins()
+    {
+        int coinsToSpawn = 1;
+
+        for(int i = 0; i < coinsToSpawn; i++)
+        {
+           GameObject temp =  Instantiate(CoinPrefab);
+            temp.transform.position = getRandomPoint(GetComponent<Collider>());
+        }
+    }
+
+
+    Vector3 getRandomPoint(Collider collider)
+    {
+        Vector3 point = new Vector3(
+            Random.Range(collider.bounds.min.x, collider.bounds.max.x),
+            Random.Range(collider.bounds.min.y, collider.bounds.max.y),
+            Random.Range(collider.bounds.min.z, collider.bounds.max.z)
+            );
+
+        if(point != collider.ClosestPoint(point))
+        {
+            point = getRandomPoint(collider);
+        }
+
+        point.y = 1;
+
+        return point;
+
 
     }
 }
