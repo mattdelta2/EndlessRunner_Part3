@@ -6,6 +6,7 @@ public class GroundTile : MonoBehaviour
 {
 
     GroundSpawner groundSpawner;
+    FileManager fileManager;
 
  
     void Start()
@@ -13,6 +14,7 @@ public class GroundTile : MonoBehaviour
         groundSpawner = GameObject.FindObjectOfType<GroundSpawner>();
         spawnObsticle();
         spawnBossCoins();
+        fileManager = GameObject.FindObjectOfType<FileManager>();
 
 
     }
