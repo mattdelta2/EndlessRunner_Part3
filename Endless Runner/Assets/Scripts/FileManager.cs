@@ -5,8 +5,9 @@ using UnityEngine;
 public class FileManager : MonoBehaviour
 {
 
-    public GameObject[] tilePrefab;
+    public GameObject[] tilePrefabDungeon;
     private List<GameObject> usedTiles;
+    public GameObject[] tilePrefabCity;
 
     private Transform characterTransform;
     private float Zspawner = 0.0f;
@@ -37,7 +38,7 @@ public class FileManager : MonoBehaviour
     private void TileSpawn(int prefabsList = -1)
     {
         GameObject go;
-        go = Instantiate(tilePrefab[PrefabRandomIndex()]) as GameObject;
+        go = Instantiate(tilePrefabDungeon[PrefabRandomIndex()]) as GameObject;
         go.transform.SetParent(transform);
         go.transform.position = Vector3.forward * Zspawner;
         Zspawner += tileLength;
@@ -51,7 +52,7 @@ public class FileManager : MonoBehaviour
 
     private int PrefabRandomIndex()
     {
-        if(tilePrefab.Length <= 1)
+        if(tilePrefabDungeon.Length <= 1)
         {
             return 0;
 
@@ -60,7 +61,7 @@ public class FileManager : MonoBehaviour
         int randomIndex = finalPrefabIndex;
         while(randomIndex == finalPrefabIndex)
         {
-            randomIndex = Random.Range(0, tilePrefab.Length);
+            randomIndex = Random.Range(0, tilePrefabDungeon.Length);
         }
         finalPrefabIndex = randomIndex;
         return randomIndex;
