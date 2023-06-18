@@ -1,24 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
-    public float score = 0.0f;
+    private int coin = 0;
 
-    public Text scoreText;
-    // Start is called before the first frame update
-    void Start()
+    public TextMeshProUGUI coinText;
+    void OnTriggerEnter(Collider other)
     {
-        
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        scoreText.text =((int) score).ToString();
-        //score = 
+        if (other.transform.tag == "Coin")
+        {
+            coin++;
+            coinText.text = "Coin: " + coin.ToString();
+            Debug.Log(coin);
+            Destroy(other.gameObject);
+        }
     }
 }

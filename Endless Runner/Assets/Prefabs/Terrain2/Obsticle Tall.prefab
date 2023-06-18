@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8616577568781637673}
   m_Layer: 0
   m_Name: Obsticle Tall
-  m_TagString: Untagged
+  m_TagString: Obsticle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

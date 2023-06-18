@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HowToPlay.unity
     guid: b52f13eb1b3cacc4b949a8da1fe39cf7
+  - enabled: 1
+    path: Assets/Scenes/HighScore.unity
+    guid: 2b871bfe42a5e27448fc0f5a59730745
+  - enabled: 1
+    path: Assets/Scenes/ShootingBossScene.unity
+    guid: 5ea8bd631ab409a4fb4de221f58369ef
   m_configObjects: {}

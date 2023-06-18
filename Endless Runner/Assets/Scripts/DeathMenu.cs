@@ -6,23 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class DeathMenu : MonoBehaviour
 {
-    private void Start()
-    {
-        gameObject.SetActive(false);
-    }
-   
-    public void ShowScreen()
-    {
-        gameObject.SetActive(true);
-    }
     public void PlayAgain()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("GameScene");
     }
     public void MainMenuLoad()
     {
         SceneManager.LoadScene("MainMenu");
 
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
 
