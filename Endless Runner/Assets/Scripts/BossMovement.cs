@@ -1,19 +1,18 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class BossMovement : MonoBehaviour
 {
-    private CharacterController playerController;
+    private CharacterController bossController;
     bool isJump = false;
     public bool comingDown = false;
-    public GameObject playerObject;
-    public float speed = 6f;
+    public GameObject bossObject;
+    public float speed = 5f;
     public BossMovement boss;
-   // public Rigidbody rb;
+    // public Rigidbody rb;
 
-     float horizontalInput;
+    float horizontalInput;
     public float horizontalMulti = 2f;
     public float LeftRightSpeed = 4;
     private bool isDead = false;
@@ -24,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        playerController = GetComponent<CharacterController>();
+        bossController = GetComponent<CharacterController>();
     }
 
 
@@ -35,32 +34,32 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
-        transform.Translate(Vector3.forward*Time.deltaTime*speed, Space.World);
+        transform.Translate(Vector3.forward * Time.deltaTime * speed, Space.World);
 
 
 
-        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             if (this.gameObject.transform.position.x > LevelBoundry.leftSide)
             {
                 transform.Translate(Vector3.left * Time.deltaTime * LeftRightSpeed);
             }
         }
-        if(Input.GetKey(KeyCode.D)|| Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             if (this.gameObject.transform.position.x < LevelBoundry.rightSide)
             {
                 transform.Translate(Vector3.right * Time.deltaTime * LeftRightSpeed);
             }
         }
-        
+
 
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Space))
         {
             if (isJump == false)
             {
                 isJump = true;
-                playerObject.GetComponent<Animator>().Play("Jump");
+                bossObject.GetComponent<Animator>().Play("Jump");
                 StartCoroutine(JumpSeq());
             }
         }
@@ -82,14 +81,14 @@ public class PlayerMovement : MonoBehaviour
             yield return new WaitForSeconds(0.4F);
             isJump = false;
             comingDown = false;
-            playerObject.GetComponent<Animator>().Play("Running");
+            bossObject.GetComponent<Animator>().Play("Running");
         }
-        
+       
 
     }
     private void OnControllerColliderHit(ControllerColliderHit hit) //called everytime objects hits obstales
     {
-        if (hit.point.z > transform.position.z + playerController.radius)
+        if (hit.point.z > transform.position.z + bossController.radius)
         {
             Death();
         }
@@ -99,9 +98,33 @@ public class PlayerMovement : MonoBehaviour
     {
         isDead = true;
         Debug.Log("You have DIED");
-        
+
 
 
 
     }
+
+
+    /*public Animator bossAnimation;
+    public Transform boss;
+    public float currentDistance;
+    public float bossSpeed = 0.5f;
+    public Vector3 posistion;
+    // Start is called before the first frame update*/
+    /* void Start()
+     {
+
+
+     }
+     private void Update()
+     {
+         //Follow(posistion, bossSpeed);
+     }
+
+
+     public void Follow(Vector3 pos, float speed)
+     {
+         /*posistion = pos - Vector3.back * currentDistance;
+         boss.position = Vector3.Lerp(boss.position, posistion, Time.deltaTime + speed / currentDistance);*/
+    //}
 }
