@@ -32,14 +32,15 @@ public class GroundTile : MonoBehaviour
         
     }
 
-    public GameObject obsticlePrefab;
+    public GameObject[] obsticlePrefab;
 
     void spawnObsticle()
     {
+        int RandomObsticleSpawn = Random.Range(0, 2);
         int obsticlespawnIndex = Random.Range(2, 4);
         Transform spawnPoint = transform.GetChild(obsticlespawnIndex).transform;
 
-        Instantiate(obsticlePrefab, spawnPoint.position,Quaternion.identity, transform);
+        Instantiate(obsticlePrefab[RandomObsticleSpawn], spawnPoint.position,Quaternion.identity, transform);
 
     }
 

@@ -93,7 +93,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b3a50afde8934c479f67bfe926cbdda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obsticlePrefab: {fileID: 1677921020075253849, guid: dbfad7ed09c113546a42a68de2d101e6, type: 3}
+  obsticlePrefab:
+  - {fileID: 1677921020075253849, guid: dbfad7ed09c113546a42a68de2d101e6, type: 3}
+  - {fileID: 1677921020075253849, guid: 80c64e01b7dc75049a98566324ff80cf, type: 3}
   CoinPrefab: {fileID: 2687618500076985061, guid: 77078cd25e428d146b46f15eb6827f91, type: 3}
 --- !u!1 &6201218999553557891
 GameObject:
