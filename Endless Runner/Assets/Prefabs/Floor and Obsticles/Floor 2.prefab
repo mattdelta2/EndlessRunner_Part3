@@ -206,10 +206,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f312c3d54e002a2459cbceacb541eecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obsticles:
+  score: {fileID: 0}
+  Dungeonobsticles:
   - {fileID: 4890334762082118012, guid: 4fb6502acd1224c48b8c52b3c132ef8c, type: 3}
   - {fileID: 4890334762082118012, guid: 8ba51e9ea59f50343baf96943c462e1c, type: 3}
   - {fileID: 4890334762082118012, guid: d6244f9d5564f2f4b99bc6991834a30a, type: 3}
+  CityObsticles:
+  - {fileID: 1677921020075253849, guid: dbfad7ed09c113546a42a68de2d101e6, type: 3}
+  - {fileID: 1677921020075253849, guid: 80c64e01b7dc75049a98566324ff80cf, type: 3}
   Coins: {fileID: 7237855016449033909, guid: 4657e4e8a91c47649ab2232a3c642900, type: 3}
   Powerups: {fileID: 3314356913583849716, guid: f5d1b120f4562b44fbcbd13b3af05041, type: 3}
 --- !u!1 &6311605110419641009

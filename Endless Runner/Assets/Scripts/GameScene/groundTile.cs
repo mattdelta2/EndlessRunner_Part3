@@ -6,6 +6,7 @@ public class groundTile : MonoBehaviour
 {
     
     SpawnTiles spawnTiles;
+    public Score score;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +25,8 @@ public class groundTile : MonoBehaviour
         
     }
 
-    public GameObject[] obsticles;
+    public GameObject[] Dungeonobsticles;
+    public GameObject[] CityObsticles;
 
     void SpawnObsticles()
     {
@@ -33,7 +35,16 @@ public class groundTile : MonoBehaviour
         int obstacleSpawnIndex = Random.Range(2, 5);
         Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
         //spawn obsticle
-        Instantiate(obsticles[randomObsticleToSpawn], spawnPoint.position, Quaternion.identity, transform);
+        Instantiate(Dungeonobsticles[randomObsticleToSpawn], spawnPoint.position, Quaternion.identity, transform);
+
+       /* if(score.coin ==5)
+        {
+            int CityrandomObsticleToSpawn = Random.Range(0, 3);
+            int CityobstacleSpawnIndex = Random.Range(2, 5);
+            Transform CityspawnPoint = transform.GetChild(CityobstacleSpawnIndex).transform;
+            Instantiate(CityObsticles[CityrandomObsticleToSpawn], CityspawnPoint.position, Quaternion.identity, transform);
+
+        }*/
 
 
     }
@@ -82,7 +93,7 @@ public class groundTile : MonoBehaviour
 
     void SpawnPowerUps()
     {
-        float powerupsToSpawn = 0.5f;
+        float powerupsToSpawn = 1f;
         for(int i = 0;i < powerupsToSpawn;i++)
         {
             GameObject temp = Instantiate(Powerups);
