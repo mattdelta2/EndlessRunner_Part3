@@ -219,6 +219,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scores (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2390875337877774187, guid: 56ba9e4d1fbf2c84e8a01ecf7d4a4faa, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 8300000, guid: a6ee1351730c44a40a7b1cf553b01362, type: 3}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 56ba9e4d1fbf2c84e8a01ecf7d4a4faa, type: 3}
@@ -1406,6 +1410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coin: 0
+  audioSource: {fileID: 0}
   coinText: {fileID: 0}
 --- !u!114 &1781039289
 MonoBehaviour:
