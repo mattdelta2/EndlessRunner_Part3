@@ -29,7 +29,7 @@ public class SpawnTiles : MonoBehaviour
 
     public void BossScene()
     {
-        if (score.coin == 100)
+        if (score.coin == 5)
         {
             SceneManager.LoadScene("ShootingBossScene");
         }
