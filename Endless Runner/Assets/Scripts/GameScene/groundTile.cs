@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class groundTile : MonoBehaviour
 {
-    /*FileManager fileManager;
+    
+    SpawnTiles spawnTiles;
     // Start is called before the first frame update
     void Start()
     {
-        fileManager = GameObject.FindObjectOfType<FileManager>();
-        SpawnObsticles();
+        
+        spawnTiles = GameObject.FindObjectOfType<SpawnTiles>();
         SpawnCoins();
+        SpawnObsticles();
+        SpawnPowerUps();
         
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        fileManager.SpawnTile();
+        spawnTiles.SpawnTile();
         Destroy(gameObject,2);
         
     }
@@ -25,11 +28,14 @@ public class groundTile : MonoBehaviour
 
     void SpawnObsticles()
     {
-        int obstacleType = Random.Range(1, 4);
-        int obsticleSpawnIndex = Random.Range(1, 4);
-        Transform spawnpoint = transform.GetChild(obsticleSpawnIndex).transform;
+        //choose random point
+        int randomObsticleToSpawn = Random.Range(0, 3);
+        int obstacleSpawnIndex = Random.Range(2, 5);
+        Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
+        //spawn obsticle
+        Instantiate(obsticles[randomObsticleToSpawn], spawnPoint.position, Quaternion.identity, transform);
 
-        Instantiate(obsticles[obstacleType],spawnpoint.position,Quaternion.identity,transform);
+
     }
 
     public GameObject Coins;
@@ -44,6 +50,8 @@ public class groundTile : MonoBehaviour
             temp.transform.position = getRandomPoint(GetComponent<Collider>());
         }
     }
+    
+
 
 
     Vector3 getRandomPoint(Collider collider)
@@ -69,5 +77,19 @@ public class groundTile : MonoBehaviour
     void Update()
     {
         
-    }*/
+    }
+    public GameObject Powerups;
+
+    void SpawnPowerUps()
+    {
+        float powerupsToSpawn = 0.5f;
+        for(int i = 0;i < powerupsToSpawn;i++)
+        {
+            GameObject temp = Instantiate(Powerups);
+            temp.transform.position = getRandomPoint(GetComponent<Collider>());
+
+
+        }
+
+    }
 }

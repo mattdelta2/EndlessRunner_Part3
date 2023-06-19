@@ -33,7 +33,7 @@ public class CoinManager : MonoBehaviour
     {
         coins++;
         Coins.text = "Coins: " + coins.ToString();
-        if(coins == 5)
+        if(coins == 50)
         {
             SceneManager.LoadScene("ShootingBossScene");
         }
