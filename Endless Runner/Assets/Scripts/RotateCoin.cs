@@ -6,6 +6,7 @@ public class RotateCoin : MonoBehaviour
 {
 
     public float rotateSpeed = 90f;
+    public AudioClip coin;
 
 
      void Update()
@@ -21,6 +22,7 @@ public class RotateCoin : MonoBehaviour
         }
 
         CoinManager.inst.IncreaseScore();
+        AudioSource.PlayClipAtPoint(coin, transform.position);
 
         Destroy(gameObject);
     }

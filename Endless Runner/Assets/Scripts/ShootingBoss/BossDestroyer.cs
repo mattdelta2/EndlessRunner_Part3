@@ -8,6 +8,7 @@ public class BossDestroyer : MonoBehaviour
 {
 
     public float turnSpeed = 90f;
+    public AudioClip boss;
 
     
     // Start is called before the first frame update
@@ -37,6 +38,7 @@ public class BossDestroyer : MonoBehaviour
         }
 
         GameManager.Inst.DecreaseHealth();
+        AudioSource.PlayClipAtPoint(boss, transform.position);
 
 
 

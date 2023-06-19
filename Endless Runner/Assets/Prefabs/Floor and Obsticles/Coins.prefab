@@ -112,3 +112,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 90
+  coin: {fileID: 8300000, guid: 1965a7c4e6903a0458417fba2c52ee1e, type: 3}
