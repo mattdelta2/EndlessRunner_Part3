@@ -19,6 +19,7 @@ public class PlayerMotor : MonoBehaviour
     bool isJump = false;
     public bool comingDown = false;
     public GameObject playerObject;
+
     
     public DeathMenu deathMenu;
     

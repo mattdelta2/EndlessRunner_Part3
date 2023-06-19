@@ -10,13 +10,14 @@ public class PlayerMovement : MonoBehaviour
     public bool comingDown = false;
     public GameObject playerObject;
     public float speed = 5f;
+    public BossMovement boss;
    // public Rigidbody rb;
 
      float horizontalInput;
     public float horizontalMulti = 2f;
     public float LeftRightSpeed = 4;
     private bool isDead = false;
-
+    public float curDistance;
 
 
 
@@ -29,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        boss.currentDistance = curDistance;
         if (isDead)
         {
             return;
@@ -82,6 +84,7 @@ public class PlayerMovement : MonoBehaviour
             comingDown = false;
             playerObject.GetComponent<Animator>().Play("Running");
         }
+        boss.Follow(transform.position, speed);
 
     }
     private void OnControllerColliderHit(ControllerColliderHit hit) //called everytime objects hits obstales
