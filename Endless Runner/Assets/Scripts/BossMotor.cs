@@ -7,14 +7,14 @@ public class BossMotor : MonoBehaviour
 
     private CharacterController bossController;
     private Vector3 moveVector;
-    public float horizontalSpeed = 5f;
+    public float horizontalSpeed = 1f;
     public float verticalSpeed = 0.0f;
     private float gravity = 10f;
     public float boostSpeed;
     public float speedCooldown;
     
     private bool isDead = false;
-    private float speed = 5f; //character movement speed; 5f
+    private float speed = 1f; //character movement speed; 5f
     bool isJump = false;
     public bool comingDown = false;
     public GameObject bossObject;
@@ -24,7 +24,7 @@ public class BossMotor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bossController = GetComponent<CharacterController>();
+       // bossController = GetComponent<CharacterController>();
 
     }
 
