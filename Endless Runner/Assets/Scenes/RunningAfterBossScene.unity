@@ -1034,6 +1034,14 @@ PrefabInstance:
       propertyPath: score
       value: 
       objectReference: {fileID: 17848093}
+    - target: {fileID: 1734818402157255085, guid: 761424a1a0acf9f40b68b06c999754f7, type: 3}
+      propertyPath: CityGroundTile
+      value: 
+      objectReference: {fileID: 4861307594245158624, guid: 4487b634d5eec8b44942458b6952b6a0, type: 3}
+    - target: {fileID: 1734818402157255085, guid: 761424a1a0acf9f40b68b06c999754f7, type: 3}
+      propertyPath: DungeonGroundTile
+      value: 
+      objectReference: {fileID: 5543313641224774916, guid: b2f5d4a7b20eabb4ea975d3cda58fd0a, type: 3}
     - target: {fileID: 4823871562670102569, guid: 761424a1a0acf9f40b68b06c999754f7, type: 3}
       propertyPath: m_RootOrder
       value: 8

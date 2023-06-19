@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
         bossHealth.text = "Boss Health = " + BossHealth;
         if (BossHealth == 0)
         {
-            SceneManager.LoadScene("MainScene");
+            SceneManager.LoadScene("RunningAfterBossScene");
         }
     }
 
