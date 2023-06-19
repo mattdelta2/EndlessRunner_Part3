@@ -4,27 +4,26 @@ using UnityEngine;
 
 public class BossMotor : MonoBehaviour
 {
-
     private CharacterController bossController;
     private Vector3 moveVector;
-    public float horizontalSpeed = 1f;
+    public float horizontalSpeed = 10.0f;
     public float verticalSpeed = 0.0f;
     private float gravity = 10f;
     public float boostSpeed;
     public float speedCooldown;
-    
     private bool isDead = false;
-    private float speed = 1f; //character movement speed; 5f
+    private float speed = 3f; //character movement speed; 5f
     bool isJump = false;
     public bool comingDown = false;
     public GameObject bossObject;
+
 
     public DeathMenu deathMenu;
 
     // Start is called before the first frame update
     void Start()
     {
-       // bossController = GetComponent<CharacterController>();
+        bossController = GetComponent<CharacterController>();
 
     }
 
@@ -101,16 +100,28 @@ public class BossMotor : MonoBehaviour
 
     }
 
+    
+    private void OnControllerColliderHit(ControllerColliderHit hit) //called everytime objects hits obstales
+    {
+        if (hit.point.z > transform.position.z + bossController.radius)
+        {
+            Death();
+        }
+
+    }
+
+
+    private void Death()
+    {
+        isDead = true;
+
+        Debug.Log("You have DIED");
+        
+
+
+
+
+
+    }
 }
-    /* // Start is called before the first frame update
-     void Start()
-     {
-
-     }
-
-     // Update is called once per frame
-     void Update()
-     {
-
-     }*/
 
