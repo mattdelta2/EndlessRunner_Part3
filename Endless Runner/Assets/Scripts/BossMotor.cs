@@ -6,12 +6,11 @@ public class BossMotor : MonoBehaviour
 {
     private CharacterController bossController;
     private Vector3 moveVector;
-    public float horizontalSpeed = 1.0f;
+    public float horizontalSpeed = 10.0f;
     public float verticalSpeed = 0.0f;
     private float gravity = 10f;
     public float boostSpeed;
     public float speedCooldown;
-    private float normalSpeed = 6f;
     private bool isDead = false;
     private float speed = 3f; //character movement speed; 5f
     bool isJump = false;

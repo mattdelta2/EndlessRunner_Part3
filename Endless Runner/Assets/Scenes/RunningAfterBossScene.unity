@@ -282,7 +282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 231dc72b9d0e00145aaefa45baab7ee0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.23
+      value: 1.37
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 231dc72b9d0e00145aaefa45baab7ee0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -406,8 +406,9 @@ GameObject:
   - component: {fileID: 515126012}
   - component: {fileID: 515126011}
   - component: {fileID: 515126010}
-  - component: {fileID: 515126009}
   - component: {fileID: 515126014}
+  - component: {fileID: 515126009}
+  - component: {fileID: 515126015}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -424,7 +425,7 @@ BoxCollider:
   m_GameObject: {fileID: 515126008}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -486,13 +487,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515126008}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -9.01}
+  m_LocalPosition: {x: 0, y: 1, z: -3.03}
   m_LocalScale: {x: 0.77, y: 1.92, z: 0.39}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 532771104}
-  m_Father: {fileID: 1781039283}
-  m_RootOrder: -1
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &515126014
 MonoBehaviour:
@@ -501,17 +502,36 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515126008}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b37f20c73c723424c9349b9fe6a97241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalSpeed: 5
+  horizontalSpeed: 11
   verticalSpeed: 0
-  boostSpeed: -10
+  boostSpeed: 0
   speedCooldown: 0
   comingDown: 0
   bossObject: {fileID: 0}
+  deathMenu: {fileID: 0}
+--- !u!114 &515126015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515126008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc8aced4a3a1f4d419b597a63e7470c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalSpeed: 12
+  verticalSpeed: 0
+  boostSpeed: 0
+  speedCooldown: 0
+  comingDown: 0
+  playerObject: {fileID: 0}
   deathMenu: {fileID: 0}
 --- !u!1 &532771103 stripped
 GameObject:
@@ -1326,7 +1346,6 @@ Transform:
   - {fileID: 963194228}
   - {fileID: 411033461}
   - {fileID: 119226192}
-  - {fileID: 515126012}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

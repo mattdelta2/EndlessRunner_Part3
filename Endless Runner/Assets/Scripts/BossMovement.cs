@@ -8,7 +8,7 @@ public class BossMovement : MonoBehaviour
     bool isJump = false;
     public bool comingDown = false;
     public GameObject  bossObject;
-    public float speed = 3f;
+    public float speed = 7f;
     public BossMovement boss;
     // public Rigidbody rb;
 
