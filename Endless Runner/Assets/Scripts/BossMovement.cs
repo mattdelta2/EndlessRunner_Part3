@@ -7,8 +7,8 @@ public class BossMovement : MonoBehaviour
     private CharacterController bossController;
     bool isJump = false;
     public bool comingDown = false;
-    public GameObject bossObject;
-    public float speed = 5f;
+    public GameObject  bossObject;
+    public float speed = 3f;
     public BossMovement boss;
     // public Rigidbody rb;
 
@@ -29,7 +29,7 @@ public class BossMovement : MonoBehaviour
 
     void Update()
     {
-        
+
         if (isDead)
         {
             return;
@@ -83,7 +83,7 @@ public class BossMovement : MonoBehaviour
             comingDown = false;
             bossObject.GetComponent<Animator>().Play("Running");
         }
-       
+
 
     }
     private void OnControllerColliderHit(ControllerColliderHit hit) //called everytime objects hits obstales
@@ -103,28 +103,4 @@ public class BossMovement : MonoBehaviour
 
 
     }
-
-
-    /*public Animator bossAnimation;
-    public Transform boss;
-    public float currentDistance;
-    public float bossSpeed = 0.5f;
-    public Vector3 posistion;
-    // Start is called before the first frame update*/
-    /* void Start()
-     {
-
-
-     }
-     private void Update()
-     {
-         //Follow(posistion, bossSpeed);
-     }
-
-
-     public void Follow(Vector3 pos, float speed)
-     {
-         /*posistion = pos - Vector3.back * currentDistance;
-         boss.position = Vector3.Lerp(boss.position, posistion, Time.deltaTime + speed / currentDistance);*/
-    //}
 }
